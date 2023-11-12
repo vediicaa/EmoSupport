@@ -7,6 +7,7 @@ import { Container } from 'shared/layout';
 import { SignInContainer, Title, Form, Helper, ErrorMessage } from './style';
 import { FaAngleDoubleRight } from 'react-icons/fa';
 import 'styled-components/macro';
+import './style.js'
 
 function SignIn({ username, password, onSubmit, errors }) {
   return (

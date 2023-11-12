@@ -109,6 +109,14 @@ function AuthNav() {
                 />
                 Settings
               </MenuLink>
+              <MenuLink as={Link} to={`/messages`}>
+                <FaCog
+                  css={`
+                    margin-right: 10px;
+                  `}
+                />
+                Messages
+              </MenuLink>
               <MenuItem data-cy="auth-nav-logout-button" onSelect={logout}>
                 <FaSignOutAlt
                   css={`

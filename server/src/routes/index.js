@@ -11,6 +11,7 @@ function getRoutes() {
   router.use('/users', users.userRoutes);
   router.use('/profiles', profiles.profileRoutes);
   router.use('/tweets', tweets.tweetRoutes);
+  router.use('/messages', messagesRouter);
 
   return router;
 }

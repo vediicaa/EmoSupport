@@ -16,6 +16,7 @@ import ModalSwitch from 'components/ModalSwitch';
 import NotFoundPage from 'components/NotFoundPage';
 import TweetPage from 'pages/Tweet';
 import CreateTweetPage from 'pages/CreateTweet';
+import MessagingPage from 'pages/MessagingPage';
 
 function App() {
   return (
@@ -51,6 +52,9 @@ function App() {
             </Route>
             <Route path="/profile/:userId">
               <ProfilePage />
+            </Route>
+            <Route path="/messages">
+              <MessagingPage />
             </Route>
             <Route>
               <NotFoundPage />
