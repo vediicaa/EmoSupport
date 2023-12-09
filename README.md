@@ -1,3 +1,4 @@
+<<<<<<< HEAD
 # MERN Stack - Build a social media app 
 > MERN Stack Build  a social media app (instagram , facebook, twitter clone) with MERN  + Redux  + Bootstrap 4
 
@@ -25,3 +26,6 @@
 ### Server runs on http://localhost:5000 and client on http://localhost:3000
 
 
+=======
+# EmoSupport
+>>>>>>> 2bdf1843886ddf77049f9cef3bf664b10ab09d25

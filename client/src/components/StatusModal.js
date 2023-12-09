@@ -132,32 +132,31 @@ const StatusModal = () => {
                     </div>
 
                     <div className="show_images">
-                        {
-                            images.map((img, index) => (
-                                <div key={index} id="file_img">
-                                    {
-                                        img.camera ? imageShow(img.camera, theme)
-                                        : img.url
-                                            ?<>
-                                                {
-                                                    img.url.match(/video/i)
-                                                    ? videoShow(img.url, theme) 
-                                                    : imageShow(img.url, theme)
-                                                }
-                                            </>
-                                            :<>
-                                                {
-                                                    img.type.match(/video/i)
-                                                    ? videoShow(URL.createObjectURL(img), theme) 
-                                                    : imageShow(URL.createObjectURL(img), theme)
-                                                }
-                                            </>
-                                    }
-                                    <span onClick={() => deleteImages(index)}>&times;</span>
-                                </div>
-                            ))
-                        }
-                    </div>
+                    {images.map((img, index) => (
+                        <div key={index} id="file_img">
+                            {img.camera ? (
+                                imageShow(img.camera, theme)
+                            ) : img.url ? (
+                                <>
+                                    {img.url.match(/video/i) ? (
+                                        videoShow(img.url, theme)
+                                    ) : (
+                                        imageShow(img.url, theme)
+                                    )}
+                                </>
+                            ) : (
+                                <>
+                                    {img.type && img.type.match(/video/i) ? (
+                                        videoShow(URL.createObjectURL(img), theme)
+                                    ) : (
+                                        imageShow(URL.createObjectURL(img), theme)
+                                    )}
+                                </>
+                            )}
+                            <span onClick={() => deleteImages(index)}>&times;</span>
+                        </div>
+                    ))}
+                </div>
 
                     {
                         stream && 
